@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="none.HypnagogiApp.MainActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_vertical_margin"
+        android:text="@string/startB"
+        android:src="@drawable/logo2"
+        android:id="@+id/startB"
+        android:background="@color/textbackground"
+        android:textColor="@color/textcolor"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:text="@string/stopB"
+        android:id="@+id/stopB"
+        android:background="@color/textbackground"
+        android:textColor="@color/textcolor"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextClock
+        android:layout_width="444dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:layout_columnSpan="4"
+        android:gravity="center"
+        android:textSize="95dp" />
+
+    <Chronometer
+        android:layout_width="228dp"
+        android:layout_height="107dp"
+        android:id="@+id/chrono"
+        android:textSize="60dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

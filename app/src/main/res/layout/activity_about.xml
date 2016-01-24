@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="none.HypnagogiApp.MainActivity">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/blue"
+            android:id="@+id/imageView"
+            android:layout_alignTop="@+id/textClock"
+            android:layout_alignStart="@+id/textClock"
+            android:layout_alignLeft="@+id/textClock"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView8"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/textbackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="About"
+            android:id="@+id/textView"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:textColor="@color/textcolor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HypnagogiApp"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textColor="@color/textcolor"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="This app is designed around the idea of Hypnagogia, which is a state between sleep and wakefulness. The method of nap that this app is designed to aid in was favored by Salvadore Dahli, Albert Einstein, and Aristotle.\n\nWe have all experienced the nap that lasted just a little too long which resulted in drowsiness. A hypnagogic nap is timed by your descent into sleep. Salvadore Dahli would sit in an upright position while holding onto a fork, which as he fell asleep would fall from his hand and clatter against a plate, thus waking him up.\n \nScientists have found that there are significant benefits
+to naps; a short nap refreshes the mind and sharpens focus. A NASA study showed significant improvements in the performance of long flights by pilots who had had taken twenty-four minute naps.\n\nThe science behind it all is in the management of adenosine. As our body generates more and more adenosine, tiredness levels increase. A brief nap is useful because the majority of adenosine starts
+to break down and the adrenal gland starts to produce cortisol, a chemical that helps to make you feel more alert.
+"
+            android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:textSize="25dp"
+        android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:textColor="@color/textcolor"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>
+</ScrollView>

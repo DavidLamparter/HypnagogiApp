@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HypnagogiApp</string>
+    <string name="stopB">Stop Sound</string>
+    <string name="startB">Start Nap</string>
+    <string name="howToB">How To Use</string>
+    <string name="aboutB">About HypnogogiApp</string>
+    <string name="quickNapb">Take A Nap</string>
+    <string name="title_activity_how_to_use">HowToUse</string>
+    <string name="title_activity_about">About</string>
+</resources>
