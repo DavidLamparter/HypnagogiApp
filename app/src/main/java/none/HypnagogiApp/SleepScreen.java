@@ -2,6 +2,7 @@ package none.HypnagogiApp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.PorterDuff;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -10,11 +11,13 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.SystemClock;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class SleepScreen extends Activity implements SensorEventListener {
 
@@ -47,9 +50,36 @@ public class SleepScreen extends Activity implements SensorEventListener {
             @Override
             public void onClick(View v) {
                 alarmActive = true;
-               // startSound.setVisibility(Button.GONE);
+                // startSound.setVisibility(Button.GONE);
                 chrono.setBase(SystemClock.elapsedRealtime());
                 chrono.start();
+            }
+        });
+
+        startSound.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        if(!alarmActive) {
+                            ImageView view = (ImageView) v;
+                            view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                            alarmActive = true;
+                            chrono.setBase(SystemClock.elapsedRealtime());
+                            chrono.start();
+                            view.invalidate();
+                            break;
+                        }
+                    }
+                    case MotionEvent.ACTION_UP:
+                    case MotionEvent.ACTION_CANCEL: {
+                        ImageView view = (ImageView) v;
+                        view.getDrawable().clearColorFilter();
+                        view.invalidate();
+                        break;
+                    }
+                }
+                return true;
             }
         });
 
